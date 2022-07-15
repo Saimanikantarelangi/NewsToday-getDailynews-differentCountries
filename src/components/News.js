@@ -120,7 +120,7 @@ const News = (props) => {
                     <div className="container " style={{ background: greycolor }}>
 
                         <div className="row">
-                            {articles.map((element) => {
+                            {articles?.map((element) => {
                                 return <div className="col-md-3" key={element.url}>
                                     <NewsItem title={element.title ? element.title : ""} description={element.description ? element.description : ""} imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name} />
                                 </div>
