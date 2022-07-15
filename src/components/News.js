@@ -65,7 +65,7 @@ const News = (props) => {
         nl: "Netherlands", no: "Norway", nz: "New Zealand", ph: "Phillipines", pt: "Poland", ru: "Russia", sa: "Soudi arabia",
         sg: "Singapore", th: "Thailand", tr: "Turkey", tw: "Taiwan", ua: "Ukraine", us: "United States", gb: "United Kingdom"
     }
-
+    const fromDb = undefined;
 
 
 
@@ -111,7 +111,7 @@ const News = (props) => {
 
                 {loading && <Spinner />}
                 <InfiniteScroll
-                    dataLength={articles?.length || 0}
+                    dataLength={fromDb || articles.length}
                     next={fetchMoreData}
                     hasMore={articles.length !== totalResults}
                     loader={<Spinner />}
